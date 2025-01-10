@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --color-primary: #7c5aed;
+  --color-secondary: #009688;
+  --color-backgroud: #202122;
+  --color-primary-contrast: #fafafa;
+  --color-paper: #232323;
+  --color-error: #980000;
+  --color-text: #fafafa;
+}
+
+html[light] {
+  --color-primary: #7c5aed;
+  --color-secondary: #009688;
+  --color-backgroud: #EFF0F0;
+  --color-primary-contrast: #fafafa;
+  --color-paper: #fafafa;
+  --color-error: #980000;
+  --color-text: #202122;
+}
+
+html,
+body {
+  @apply bg-background text-text w-screen h-screen
+}
