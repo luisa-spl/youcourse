@@ -5,17 +5,17 @@
 :root {
   --color-primary: #7c5aed;
   --color-secondary: #009688;
-  --color-backgroud: #202122;
+  --color-background: #202122;
   --color-primary-contrast: #fafafa;
   --color-paper: #232323;
   --color-error: #980000;
   --color-text: #fafafa;
 }
 
-html[light] {
+body[light] {
   --color-primary: #7c5aed;
   --color-secondary: #009688;
-  --color-backgroud: #EFF0F0;
+  --color-background: #EFF0F0;
   --color-primary-contrast: #fafafa;
   --color-paper: #fafafa;
   --color-error: #980000;
@@ -24,5 +24,9 @@ html[light] {
 
 html,
 body {
-  @apply bg-background text-text w-screen h-screen
+  @apply bg-background text-text w-screen h-screen underline-offset-8;
+}
+
+a {
+  @apply hover:underline;
 }

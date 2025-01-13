@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Heebo, Inter } from "next/font/google";
+import { Header } from "./components/header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ['latin'] });
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="pt-Br">
       <body className={`${inter.className} ${heebo.className}`}>
+        <Header/>
         {children}
       </body>
     </html>

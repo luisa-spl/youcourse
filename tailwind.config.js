@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -10,9 +9,10 @@ export default {
         paper: 'var(--color-paper)',
         primary: 'var(--color-primary)',
         background: 'var(--color-background)',
-        'primary-contrast': 'var(--color-primary-contrast)'
+        'primary-contrast': 'var(--color-primary-contrast)',
       }
     },
   },
   plugins: [],
-} satisfies Config;
+}
+
