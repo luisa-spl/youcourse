@@ -22,9 +22,14 @@ body[light] {
   --color-text: #202122;
 }
 
+* {
+  box-sizing: border-box;
+} 
+
 html,
 body {
-  @apply bg-background text-text w-screen h-screen underline-offset-8;
+  overflow: overlay;
+  @apply bg-background text-text w-screen h-screen underline-offset-8 m-0 p-0;
 }
 
 a {

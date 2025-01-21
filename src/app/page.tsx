@@ -1,15 +1,12 @@
 import { APIYouTube } from "@/shared/services/api-youtube";
+import { Section } from "./components/Section";
 
 export default async function Home() {
   const courses = await APIYouTube.course.getAll();
 
   return (
     <main>
-      {courses.map(course => {
-        return (
-          <div className="mb-10" key={course.id}>{course.title}</div>
-        )
-      })}
+      <Section title="Veja todos os cursos" items={courses} variant="h-list"/>
     </main>
   );
 }
