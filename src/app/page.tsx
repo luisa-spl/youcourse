@@ -5,8 +5,10 @@ export default async function Home() {
   const courses = await APIYouTube.course.getAll();
 
   return (
-    <main>
-      <Section title="Veja todos os cursos" items={courses} variant="h-list"/>
+    <main className="mt-12 flex justify-center">
+      <div className="min-[880px]:max-w-[880px]">
+        <Section title="Veja todos os cursos" items={courses} variant="h-list"/>
+      </div>
     </main>
   );
 }

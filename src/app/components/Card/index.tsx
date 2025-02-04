@@ -23,7 +23,7 @@ export function CourseCard({ imageURL, title, description, id }: CardProps) {
         <h4 className="font-extrabold text-lg px-4">
           {title}
         </h4>
-        <p className="line-clamp-3 sm:line-clamp-5 px-4">
+        <p className="line-clamp-3 sm:line-clamp-4 md:line-clamp-5 px-4">
           {description}
         </p>
       </article>

@@ -11,8 +11,10 @@ export default async function CoursesPage() {
     const courses = await APIYouTube.course.getAll();
   
   return (
-    <main className="py-8 px-12 overflow-x-hidden w-11/12 ml-auto mr-auto">
-      <Section title="Veja todos os cursos" items={courses} variant="grid"/>
+    <main className="mt-12 flex justify-center">
+      <div className="min-[880px]:max-w-max">
+        <Section title="Veja todos os cursos" items={courses} variant="grid"/>
+      </div>
     </main>
   );
 }
