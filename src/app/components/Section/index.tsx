@@ -37,7 +37,7 @@ export function Section({ title, items, variant = 'grid' }: SectionProps) {
   };
   
   return (
-    <section className="flex flex-col gap-4 px-4">
+    <section className="flex flex-col gap-8 sm:gap-4 px-4">
       <h2 className="font-bold text-3xl">
         {title}
       </h2>
@@ -45,20 +45,20 @@ export function Section({ title, items, variant = 'grid' }: SectionProps) {
       <ul 
         ref={scrollRef}
         onScroll={handleSetScroll}
-        className={`overflow-primary grid grid-cols-1 sm:grid-cols-none ${variant === 'grid' ? 'sm:grid-cols-2 xl:grid-cols-3' : 'sm:grid-flow-col sm:overflow-x-auto pb-3'} gap-4 sm:gap-8 max-w-screen-xl`}
+        className={`overflow-primary grid grid-cols-1 md:grid-cols-none ${variant === 'grid' ? 'sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3' : 'md:grid-flow-col md:overflow-x-auto pb-3'} gap-4 md:gap-8 max-w-screen-xl`}
       >
         {variant === 'h-list' && (
           <button 
             disabled={scrollAt === 'start'}
             onClick={() => handleScroll(-350)} 
-            className="h-14 w-14 bg-primary rounded-full flex justify-center items-center sticky my-auto left-0 -ml-20 disabled:opacity-0 transition-opacity"
+            className="h-14 w-14 bg-primary rounded-full hidden md:flex justify-center items-center sticky my-auto left-0 -ml-20 disabled:opacity-0 transition-opacity"
           >
             <MdKeyboardArrowLeft size={32}/>
           </button>
         )}
 
         {items.map(item => (
-          <li key={item.id} className="w-full sm:w-96">
+          <li key={item.id} className="w-96">
             <CourseCard imageURL={item.image} title={item.title} description={item.description} id={item.id}  />
           </li>
         ))}
@@ -67,7 +67,7 @@ export function Section({ title, items, variant = 'grid' }: SectionProps) {
           <button
             disabled={scrollAt === 'end'}
             onClick={() => handleScroll(350)} 
-            className="h-14 w-14 bg-primary rounded-full flex justify-center items-center sticky my-auto right-0 -ml-20 disabled:opacity-0 transition-opacity"
+            className="h-14 w-14 bg-primary rounded-full hidden sm:flex justify-center items-center sticky my-auto right-0 -ml-20 disabled:opacity-0 transition-opacity"
           >
             <MdKeyboardArrowRight size={32}/>
           </button>

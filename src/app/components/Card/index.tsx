@@ -11,7 +11,7 @@ interface CardProps {
 export function CourseCard({ imageURL, title, description, id }: CardProps) {
   return (
     <Link href={`/cursos/${id}`} className="hover:no-underline">
-      <article className="flex flex-col gap-3 bg-white/10 blackdrop-blur-custom rounded-2xl  h-98 px-4 py-4">
+      <article className="flex flex-col gap-3 bg-slate-600/40 hover:bg-primary blackdrop-blur-custom rounded-2xl  h-98 px-4 py-4">
         <Image 
           src={imageURL} 
           alt={title} 
