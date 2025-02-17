@@ -36,3 +36,27 @@ body {
 a {
   @apply hover:underline;
 }
+
+.overflow-primary::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+*::-webkit-scrollbar {
+  @apply h-3 w-2;
+}
+
+*::-webkit-scrollbar-button {
+  @apply hidden;
+}
+
+*::-webkit-scrollbar-corner {
+  @apply bg-transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-paper;
+}
+
+*::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
