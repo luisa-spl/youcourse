@@ -11,7 +11,7 @@ interface CourseHeaderProps {
 
 export function CourseHeader({ title, description, totalClasses }: CourseHeaderProps) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 mb-10">
       <h1 className="font-extrabold text-xl">{title}</h1>
       <CollapseText numberOfLines={3}>{description}</CollapseText> 
       <div className="flex gap-4 items-center mt-1">

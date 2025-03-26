@@ -27,7 +27,7 @@ export function Header() {
 
   return (
     <>
-      <header className="flex items-center justify-between fixed top-0 right-0 left-0 bg-primary p-4 px-8">
+      <header className="flex items-center justify-between fixed top-0 right-0 left-0 bg-primary p-4 px-8 z-30">
         <Image src="/youcourse.png" alt="youcourse logotipo" width={50} height={50} />
         <nav className="flex gap-8">
           <ul className="hidden md:flex items-center gap-8" tabIndex={openDrawer ? -1 : undefined}>
