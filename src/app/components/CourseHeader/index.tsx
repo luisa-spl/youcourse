@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from "../Button";
+import { CollapseText } from "./CollapseText";
 
 interface CourseHeaderProps {
   title: string;
@@ -10,10 +11,10 @@ interface CourseHeaderProps {
 
 export function CourseHeader({ title, description, totalClasses }: CourseHeaderProps) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-4">
       <h1 className="font-extrabold text-xl">{title}</h1>
-      <p>{description}</p>
-      <div className="flex gap-2 items-center mt-1">
+      <CollapseText numberOfLines={3}>{description}</CollapseText> 
+      <div className="flex gap-4 items-center mt-1">
         <Button 
           label="Compartilhar"
           onClick={() => ('')} 
