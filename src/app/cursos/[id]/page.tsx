@@ -17,11 +17,12 @@ export default async function CourseDetail({ params }: CourseDetailProps) {
   const course = await APIYouTube.course.getById(params.id);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 lg:flex-row-reverse">
       <StartCourse 
         bgImage={course.image}
         classId="1"
         courseId={course.id}
+        courseTitle={course.title}
       />
       <CourseHeader
         title={course.title}

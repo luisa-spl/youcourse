@@ -16,7 +16,7 @@ export function StartCourse({ bgImage, courseId, classId, courseTitle }: StartCo
 
   return (
     <>
-      <div ref={ref} className="flex flex-col gap-4 p-3 bg-paper rounded-md">
+      <div ref={ref} className="flex flex-col gap-4 p-3 bg-paper rounded-md min-w-80 lg:h-min lg:sticky lg:top-[163px]">
         <Link 
           style={{ backgroundImage: `url(${bgImage})` }}
           className="bg-no-repeat bg-cover bg-center aspect-video w-full rounded"
@@ -27,7 +27,7 @@ export function StartCourse({ bgImage, courseId, classId, courseTitle }: StartCo
           </div>
         </Link>
         <Link 
-          className="bg-primary p-2 px-3 rounded text-center"
+          className="bg-primary p-2 px-3 rounded text-center hover:no-underline"
           href={`/player/${courseId}/${classId}`} 
         >
           Começar curso
@@ -38,7 +38,7 @@ export function StartCourse({ bgImage, courseId, classId, courseTitle }: StartCo
         <div className="pl-12 pr-12 pt-4 pb-4 bg-paper flex flex-col gap-4 absolute left-0 right-0 top-20">
           <h1 className="font-extrabold text-xl">{courseTitle}</h1>
           <Link 
-            className="bg-primary p-2 px-3 rounded text-center"
+            className="bg-primary p-2 px-3 rounded text-center hover:no-underline"
             href={`/player/${courseId}/${classId}`} 
           >
             Começar curso

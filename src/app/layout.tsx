@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Heebo, Inter } from "next/font/google";
-import { Header } from "./components/header";
+import { Header } from "./components/Header";
 import "./globals.css";
 
 const inter = Inter({ subsets: ['latin'] });
@@ -16,7 +16,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="pt-Br">
       <body className={`${inter.className} ${heebo.className}`}>
         <Header/>
-        {children}
+        <main className="mt-12 flex justify-center">
+          <div className="min-[640px]:max-w-[860px] min-[768px]:max-w-[740px] min-[1024px]:max-w-[980px]">
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );
