@@ -9,13 +9,13 @@ type Lecture = {
   title: string;
 }
 
-interface LectureGroupProps {
+export interface LectureGroupProps {
   title: string;
   courseId: string;
-  lectures: Lecture[];
+  classes: Lecture[];
 }
 
-export function LectureGroup({ title, courseId, lectures }: LectureGroupProps) {
+export function LectureGroup({ title, courseId, classes }: LectureGroupProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -26,7 +26,7 @@ export function LectureGroup({ title, courseId, lectures }: LectureGroupProps) {
       </button>
      
       <ul data-open={open} className="flex flex-col data-[open=false]:hidden">
-        {lectures.map(item => (
+        {classes.map(item => (
           <li key={item.id}>
             <Lecture 
               playerURL={`/player/${courseId}/${item.id}`}

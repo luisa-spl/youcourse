@@ -1,4 +1,4 @@
-import { LectureGroup } from "@/app/components/CourseContent/LectureGroup";
+import { CourseContent } from "@/app/components/CourseContent";
 import { CourseHeader } from "@/app/components/CourseHeader";
 import { StartCourse } from "@/app/components/StartCourse";
 import { APIYouTube } from "@/shared/services/api-youtube";
@@ -25,16 +25,14 @@ export default async function CourseDetail({ params }: CourseDetailProps) {
         courseId={course.id}
         courseTitle={course.title}
       />
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-9">
         <CourseHeader
           title={course.title}
           description={course.description}
           totalClasses={course.numberOfClasses}
         />
-        <LectureGroup
-          title={course.title}
-          courseId={course.id}
-          lectures={course.classGroups[0].classes}
+        <CourseContent 
+          lectureGroups={course.classGroups}
         />
       </div>
     </div>
