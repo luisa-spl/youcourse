@@ -51,7 +51,7 @@ export function Header() {
             data-open={openDrawer} 
             tabIndex={openDrawer ? undefined : -1}
             onClick={() => setOpenDrawer(false)}
-            className="flex flex-col bg-gradient-to-l from-background fixed top-0 right-0 bottom-0 left-0 data-[open=false]:-translate-x-full"
+            className="data-[open=true]:flex flex-col bg-gradient-to-l from-background fixed top-0 right-0 bottom-0 left-0 data-[open=false]:-translate-x-full"
           >
             <ul 
               onClick={e => e.stopPropagation()}
@@ -70,7 +70,7 @@ export function Header() {
           </div>
         </nav>
       </header>
-      <div className="h-1/6"/>
+      <div className="h-16 lg:h-1/6"/>
     </>
   )
 }
