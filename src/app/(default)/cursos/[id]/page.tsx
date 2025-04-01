@@ -1,6 +1,6 @@
-import { CourseContent } from "@/app/components/CourseContent";
-import { CourseHeader } from "@/app/components/CourseHeader";
-import { StartCourse } from "@/app/components/StartCourse";
+import { CourseContent } from "@/components/CourseContent";
+import { CourseHeader } from "@/components/CourseHeader";
+import { StartCourse } from "@/components/StartCourse";
 import { APIYouTube } from "@/shared/services/api-youtube";
 import { Metadata } from "next";
 

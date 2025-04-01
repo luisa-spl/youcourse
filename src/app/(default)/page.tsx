@@ -1,6 +1,6 @@
 import { APIYouTube } from "@/shared/services/api-youtube";
-import { KeepWatching } from "../components/KeepWatching";
-import { Section } from "../components/Section";
+import { KeepWatching } from "../../components/KeepWatching";
+import { Section } from "../../components/Section";
 
 export default async function Home() {
   const courses = await APIYouTube.course.getAll();

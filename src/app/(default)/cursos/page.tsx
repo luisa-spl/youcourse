@@ -1,6 +1,6 @@
 import { APIYouTube } from "@/shared/services/api-youtube";
 import { Metadata } from "next";
-import { Section } from "../../components/Section";
+import { Section } from "../../../components/Section";
 
 
 export const metadata: Metadata = {
