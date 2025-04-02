@@ -70,7 +70,6 @@ export function Header() {
           </div>
         </nav>
       </header>
-      <div className="h-16 lg:h-1/6"/>
     </>
   )
 }

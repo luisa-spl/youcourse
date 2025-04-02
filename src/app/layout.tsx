@@ -14,10 +14,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="pt-Br">
       <body className={`${inter.className} ${heebo.className}`} style={{ 'minWidth': '100vw' }}>
-        <main className="mt-[7.5%] flex justify-center pb-12 pl-3 pr-4">
-          <div className="min-[640px]:max-w-[860px] min-[768px]:max-w-[740px] min-[1024px]:max-w-[980px]">
-            {children}
-          </div>
+        <main>
+          {children}
         </main>
       </body>
     </html>
