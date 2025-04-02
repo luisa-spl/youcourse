@@ -1,3 +1,5 @@
+import { PlayerHeader } from "@/components/PlayerHeader";
+
 interface PagePlayerProps {
   params: {
     courseId: string;
@@ -7,6 +9,11 @@ interface PagePlayerProps {
 
 export default function PagePlayer({ params: { classId, courseId } }: PagePlayerProps) {
   return (
-    <div>{courseId} {classId}</div>
+    <div>
+      <PlayerHeader 
+        courseTitle="NextJS, TailwindCSS e Typescript: #32" 
+        classTitle="Criando componente de header para a tela de player" 
+      />
+    </div>
   );
 };
