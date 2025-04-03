@@ -1,20 +1,25 @@
+'use client';
+
 import { MdKeyboardArrowDown, MdKeyboardArrowRight } from "react-icons/md";
 import { PlayerClass, PlayerClassProps } from "../PlayerClass";
 
-interface PlayerGroupProps {
+export interface PlayerGroupProps {
   title: string;
   isOpen: boolean;
   position: number;
-  classes: Omit<PlayerClassProps, 'onPlay' | 'onCheck'>[];
+  currentClassId: string;
+  classes: (Pick<PlayerClassProps, 'classTitle' | 'isConcluded'> & { classId: string; })[];
   onToggle: () => void;
+  onPlay: (classId: string) => void;
+  onCheck: (classId: string) => void;
 }
 
-export function PlayerGroup({ title, position, classes, isOpen, onToggle }: PlayerGroupProps) {
+export function PlayerGroup({ title, position, currentClassId, classes, isOpen, onToggle, onPlay, onCheck }: PlayerGroupProps) {
   const concludedClasses = classes.filter((item) => item.isConcluded);
 
   return (
     <div className="flex flex-col">
-      <button className="flex gap-4 p-4 bg-paper items-center" onClick={onToggle}>
+      <button className="flex gap-4 p-4 bg-paper items-center hover:opacity-70" onClick={onToggle}>
         <div className="flex bg-background h-12 w-12 rounded-full items-center justify-center">
           {position}
         </div>
@@ -37,10 +42,10 @@ export function PlayerGroup({ title, position, classes, isOpen, onToggle }: Play
           <li key={item.classTitle}>
             <PlayerClass 
               classTitle={item.classTitle}
-              isPlaying={item.isPlaying}
+              isPlaying={item.classId === currentClassId}
               isConcluded={item.isConcluded}
-              onCheck={() => console.log('check')}
-              onPlay={() => console.log('play')}
+              onPlay={() => onPlay(item.classId)}
+              onCheck={() => onCheck(item.classId)}
             />
           </li>
         ))}
