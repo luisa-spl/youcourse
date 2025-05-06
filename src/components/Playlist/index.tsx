@@ -11,18 +11,20 @@ interface PlaylistProps {
 }
 
 export function Playlist({ classList, currentClassId, currentCourseId }: PlaylistProps) {
-  const [openedIndex, setOpenedIndex] = useState<number | undefined>(undefined);
+  const [openedIndex, setOpenedIndex] = useState<number | undefined>(
+    classList.findIndex(classList => classList.classes.some(classItem => classItem.classId === currentClassId))
+  );
   const router = useRouter();
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 h-full">
       <div className="flex flex-col p-4 bg-paper">
         <h3 className="font-bold text-lg">
           Conteúdo do curso
         </h3>
       </div>
 
-      <ul>
+      <ul className="overflow-auto overflow-primary">
         {classList.map((item, index) => (
           <li key={item.title}>
             <PlayerGroup 
