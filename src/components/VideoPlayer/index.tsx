@@ -8,6 +8,10 @@ export function VideoPlayer({ videoId }: { videoId: string; }) {
   return (
     <>
       <ReactPlayer 
+        height="100%"
+        width="100%"
+        controls={true}
+        playing={true}
         url={`https://www.youtube.com/watch?v=${videoId}`}
       />
     </>

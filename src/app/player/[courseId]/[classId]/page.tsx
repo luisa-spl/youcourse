@@ -208,9 +208,11 @@ export default function PagePlayer({ params: { classId, courseId } }: PagePlayer
           />
         </div>
         <div className="flex-1">
-          <VideoPlayer 
-            videoId='apXQAnFX3JM'
-          />
+          <div className="aspect-video">
+            <VideoPlayer 
+              videoId='apXQAnFX3JM'
+            />
+          </div>
         </div>
       </div>
     </main>
