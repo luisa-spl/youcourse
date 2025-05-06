@@ -1,5 +1,6 @@
 import { PlayerHeader } from "@/components/PlayerHeader";
 import { Playlist } from "@/components/Playlist";
+import { VideoPlayer } from "@/components/VideoPlayer";
 
 interface PagePlayerProps {
   params: {
@@ -206,7 +207,11 @@ export default function PagePlayer({ params: { classId, courseId } }: PagePlayer
             ]}
           />
         </div>
-        <div className="flex-1">Player</div>
+        <div className="flex-1">
+          <VideoPlayer 
+            videoId='apXQAnFX3JM'
+          />
+        </div>
       </div>
     </main>
   );
