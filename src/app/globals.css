@@ -30,7 +30,7 @@ body[light] {
 html,
 body {
   overflow: overlay;
-  @apply bg-background text-text w-screen h-screen underline-offset-8 m-0 p-0;
+  @apply bg-background text-text h-screen underline-offset-8 m-0 p-0;
 }
 
 a {

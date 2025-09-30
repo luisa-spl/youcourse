@@ -8,6 +8,7 @@ module.exports = {
         error: 'var(--color-error)',
         paper: 'var(--color-paper)',
         primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
         background: 'var(--color-background)',
         'primary-contrast': 'var(--color-primary-contrast)',
       },

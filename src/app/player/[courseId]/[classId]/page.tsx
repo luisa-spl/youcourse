@@ -1,3 +1,5 @@
+'use client'
+
 import { PlayerHeader } from "@/components/PlayerHeader";
 import { Playlist } from "@/components/Playlist";
 import { VideoPlayer } from "@/components/VideoPlayer";
@@ -211,6 +213,7 @@ export default function PagePlayer({ params: { classId, courseId } }: PagePlayer
           <div className="aspect-video">
             <VideoPlayer 
               videoId='apXQAnFX3JM'
+              onPlayNext={() => ('play next')}
             />
           </div>
         </div>
