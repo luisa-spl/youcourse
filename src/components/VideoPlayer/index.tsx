@@ -44,7 +44,7 @@ export function VideoPlayer({ videoId, onPlayNext }: VideoPlayerProps) {
         playing={true}
         onProgress={({ playedSeconds }) => setProgress(playedSeconds)}
         onDuration={(duration) => setTotalDuration(duration)}
-        onEnden={() => onPlayNext()}
+        onEnd={() => onPlayNext()}
         url={`https://www.youtube.com/watch?v=${videoId}`}
       />
     </>
