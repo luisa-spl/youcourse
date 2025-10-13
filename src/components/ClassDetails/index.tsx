@@ -1,5 +1,6 @@
 'use client'
 
+import * as Tabs from '@radix-ui/react-tabs';
 import { useRouter } from 'next/navigation';
 import { useMemo } from 'react';
 import { PlayerGroupProps } from '../Playlist/PlayerGroup';
@@ -29,12 +30,28 @@ export function ClassDetails({ currentClassId, courseId, classGroups }: IClassDe
     <div className="flex-1">
       <div className="aspect-video">
         <VideoPlayer 
-          videoId='apXQAnFX3JM'
+          videoId="apXQAnFX3JM"
           onPlayNext={() => nextClassId ? router.push(`/player/${courseId}/${nextClassId}`) : {}}
         />
       </div>
-      <div>
-        Descrição
+      <div className="mt-6">
+        <Tabs.Root defaultValue="class-details">
+          <Tabs.List className="flex border-paper border-b-2">
+            <Tabs.Trigger value="class-details" className="p-2 border-transparent border-b-4 rounded-t-md data-[state=active]:bg-paper data-[state=active]:border-primary">
+              Detalhes da aula
+            </Tabs.Trigger>
+            <Tabs.Trigger value="course-details" className="p-4 border-transparent border-b-4 rounded-t-md data-[state=active]:bg-paper data-[state=active]:border-primary">
+              Visão geral do curso
+            </Tabs.Trigger>
+          </Tabs.List>
+          {/* <hr className="border-e-red-800"/> */}
+          <Tabs.Content value="class-details">
+            Descrição da aula
+          </Tabs.Content>
+          <Tabs.Content value="course-details">
+            Descrição do curso
+          </Tabs.Content>
+        </Tabs.Root>
       </div>  
     </div>
   )

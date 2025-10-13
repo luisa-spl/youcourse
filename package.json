@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@googleapis/youtube": "^20.0.0",
+    "@radix-ui/react-tabs": "^1.1.13",
     "autoprefixer": "^10.4.20",
     "next": "15.1.4",
     "postcss": "^8.4.49",
