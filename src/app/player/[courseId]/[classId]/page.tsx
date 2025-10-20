@@ -213,6 +213,11 @@ export default function PagePlayer({ params: { classId, courseId } }: PagePlayer
           currentClassId={classId}
           courseId={courseId}
           classGroups={classGroupsMock}
+          course={{
+            title: 'NextJS, TailwindCSS e Typescript: #32',
+            description: 'Criando componente de header para a tela de player',
+            totalClasses: 48
+          }}  
         />
       </div>
     </main>
