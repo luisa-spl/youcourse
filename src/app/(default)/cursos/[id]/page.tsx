@@ -8,14 +8,35 @@ interface CourseDetailProps {
   params: { id: string };
 }
 
-export async function generateMetadata({ params }: CourseDetailProps): Promise<Metadata> {
+export async function generateStaticParams(): Promise<CourseDetailProps['params'][]> {
+  const courses = await APIYouTube.course.getAll();
+  return courses.map(course => ({ id: course.id }));
+}  
+
+export async function generateMetadata(props: CourseDetailProps): Promise<Metadata> {
+  const { id } = await props.params;
+  const courseDetail = await APIYouTube.course.getById(id);
+
   return {
-    title: `YouCourse | params `
-  }
+    title: courseDetail.title,
+    description: courseDetail.description,
+    openGraph: {
+      locale: 'pt_BR',
+      type: 'video.other',
+      title: courseDetail.title,
+      images: courseDetail.image,
+      description: courseDetail.description,
+      videos: courseDetail.classGroups
+        .reduce<string[]>((previous, current) => [
+          ...previous,
+          ...current.classes.map(classItem => `http://localhost:3000/player/${current.courseId}/${classItem.id}`),
+        ], []),
+    }
+  };
 };
 
-export default async function CourseDetail({ params }: CourseDetailProps) {
-  const { id } = await params;
+export default async function CourseDetail(props: CourseDetailProps) {
+  const { id } = await props.params;
   const course = await APIYouTube.course.getById(id);
 
   return (
