@@ -193,7 +193,9 @@ const classGroupsMock = [
     },
 ];
 
-export default function PagePlayer({ params: { classId, courseId } }: PagePlayerProps) {
+export default async function PagePlayer({ params }: PagePlayerProps) {
+  const { classId, courseId } = await params;
+
   return (
     <main className="flex flex-col gap-2 h-screen">
       <PlayerHeader 

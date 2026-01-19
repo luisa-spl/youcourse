@@ -15,7 +15,8 @@ export async function generateMetadata({ params }: CourseDetailProps): Promise<M
 };
 
 export default async function CourseDetail({ params }: CourseDetailProps) {
-  const course = await APIYouTube.course.getById(params.id);
+  const { id } = await params;
+  const course = await APIYouTube.course.getById(id);
 
   return (
     <div className="flex flex-col gap-4 lg:flex-row-reverse">

@@ -26,7 +26,7 @@ export function Playlist({ classList, currentClassId, currentCourseId }: Playlis
 
       <ul className="overflow-auto overflow-primary">
         {classList.map((item, index) => (
-          <li key={item.title}>
+          <li key={`${index}-${item.title}`}>
             <PlayerGroup 
               position={index + 1}
               title={item.title}
