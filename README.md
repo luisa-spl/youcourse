@@ -9,7 +9,12 @@ A proposta é oferecer um ambiente minimalista, onde o usuário pode consumir co
 - Next.js  
 - TypeScript  
 - TailwindCSS  
-- YouTube Data API  
+- YouTube Data API
+
+## 🎥 Demo
+
+![Demo do YouCourse](./demo.gif)
+
 
 ## Sobre o projeto
 
@@ -27,7 +32,10 @@ A plataforma consome dados da API do YouTube para exibir cursos e aulas, organiz
 - Listagem de cursos  
 - Visualização de aulas  
 - Interface limpa e focada no conteúdo  
-- Design responsivo (mobile-first)  
+- Design responsivo (mobile-first)
+
+![Demo do YouCourse](./demo2.gif)
+
 
 ## Status do projeto
 
