@@ -27,15 +27,15 @@ export function Header() {
 
   return (
     <>
-      <header className="flex items-center justify-between fixed top-0 right-0 left-0 bg-primary p-4 px-8 z-30">
+      <header className="flex items-center justify-between fixed bg-zinc-950/80 backdrop-blur-md border-b border-primary top-0 right-0 left-0 p-4 px-8 z-50 ">
         <Image src="/youcourse.png" alt="youcourse logotipo" width={50} height={50} />
         <nav className="flex gap-8">
           <ul className="hidden md:flex items-center gap-8" tabIndex={openDrawer ? -1 : undefined}>
             <li>
-              <Link href="/" data-isactive={currentPath === '/'} className="data-[isactive=true]:underline">Home</Link>
+              <Link href="/" data-isactive={currentPath === '/'} className="data-[isactive=true]:underline data-[isactive=true]:decoration-primary">Home</Link>
             </li>
             <li>
-              <Link href="/cursos" data-isactive={currentPath === '/cursos'} className="data-[isactive=true]:underline">Cursos</Link>
+              <Link href="/cursos" data-isactive={currentPath === '/cursos'} className="data-[isactive=true]:underline data-[isactive=true]:decoration-primary">Cursos</Link>
             </li>
           </ul>
           
@@ -61,10 +61,10 @@ export function Header() {
                 <MdClear size={24} />
               </button>
               <li>
-                <Link href="/" data-isactive={currentPath === '/'} className="data-[isactive=true]:underline">Home</Link>
+                <Link href="/" data-isactive={currentPath === '/'} className="data-[isactive=true]:underline data-[isactive=true]:decoration-primary">Home</Link>
               </li>
               <li>
-                <Link href="/cursos" data-isactive={currentPath === '/cursos'} className="data-[isactive=true]:underline">Cursos</Link>
+                <Link href="/cursos" data-isactive={currentPath === '/cursos'} className="data-[isactive=true]:underline data-[isactive=true]:decoration-primary">Cursos</Link>
               </li>
             </ul>
           </div>

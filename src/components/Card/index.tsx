@@ -11,12 +11,12 @@ interface CardProps {
 export function CourseCard({ imageURL, title, description, id }: CardProps) {
   return (
     <Link href={`/cursos/${id}`} className="hover:no-underline">
-      <article className="flex flex-col gap-3 bg-slate-600/40 hover:bg-primary blackdrop-blur-custom rounded-2xl  h-98 px-4 py-4">
+      <article className="flex flex-col items-center gap-3 bg-zinc-700/40 rounded-2xl h-98 px-4 py-4 hover:scale-105 transition-transform duration-300 hover:border hover:border-primary">
         <Image 
           src={imageURL} 
           alt={title} 
-          height={400} 
-          width={400} 
+          height={320} 
+          width={320} 
           draggable={false} 
           className="rounded-2xl"
         />

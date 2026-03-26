@@ -37,15 +37,15 @@ export function Section({ title, items, variant = 'grid' }: SectionProps) {
   };
   
   return (
-    <section className="flex flex-col gap-8 sm:gap-4 px-4">
-      <h2 className="font-bold text-3xl">
+    <section className="flex flex-col gap-8 sm:gap-4 px-4 mt-12">
+      <h2 className="font-bold text-3xl sm:text-2xl">
         {title}
       </h2>
 
       <ul 
         ref={scrollRef}
         onScroll={handleSetScroll}
-        className={`overflow-primary grid grid-cols-1 md:grid-cols-none ${variant === 'grid' ? 'sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3' : 'md:grid-flow-col md:overflow-x-auto pb-3'} gap-4 md:gap-8 max-w-screen-xl`}
+        className={`overflow-primary grid grid-cols-1 items-center md:grid-cols-none ${variant === 'grid' ? 'sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3' : 'md:grid-flow-col md:overflow-x-auto pb-3'} gap-4 md:gap-8 max-w-screen-xl h-[500px]`}
       >
         {variant === 'h-list' && (
           <button 
